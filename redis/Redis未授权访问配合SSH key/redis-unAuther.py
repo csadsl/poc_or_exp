@@ -32,8 +32,7 @@ class TestPOC(POCBase):
         socket.setdefaulttimeout(10)
         try:
             host = urlparse.urlparse(self.url).netloc
-            #port = 6379
-	    port = 8082
+            port = 6379
             s.connect((host, port))
             s.send(payload)
             recvdata = s.recv(1024)
